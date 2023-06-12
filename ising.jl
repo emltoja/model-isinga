@@ -4,6 +4,8 @@
 ####################### 
 using Statistics
 using Plots
+using ProgressBars
+using JLD2
 #######################
 
 # STAŁE GLOBALNE
@@ -15,19 +17,6 @@ const β  = 1/kb
 #######################
 
 """
-Zapisz siatkę do pliku 
-"""
-function _writelattice(lattice :: Matrix{Int8}, file :: IOStream)
-    for row in eachrow(lattice)
-        write(file, repr(row) * "\n")
-    end
-    write(file, "\n\n")
-end
-
-
-
-
-"""
 
 Zwróć siatkę losowo ustawionych spinów (-1 lub 1) dla `setupmode = :random`
 albo spinów równych 1 dla `setupmode = :ordered`
@@ -37,7 +26,7 @@ function simsetup(size :: Coordinate, setupmode :: Symbol = :random)
     
     if setupmode === :random 
 
-        return rand([-Int8(1), Int8(1)], size, size)
+        return rand([Int8(-1), Int8(1)], size, size)
 
     elseif setupmode === :ordered
 
@@ -111,7 +100,7 @@ function getenergy(lat :: Matrix{Int8}, i :: Coordinate, j :: Coordinate)
     end
 
 
-    return - J * lat[i, j] * sum([topneighbor, leftneighbor, rightneighbor, bottomneighbor])
+    return J * lat[i, j] * sum([topneighbor, leftneighbor, rightneighbor, bottomneighbor])
         
 end
 
@@ -143,55 +132,73 @@ end
 
 
 
-
 """
-Przeprowadź symulację modelu Isinga 
+Symulacja modelu Isinga
+Zwraca wektor magentyzacji i zapisuje siatkę po każdym kroku
 """
-function simulation(
+function simulate(
     size :: Coordinate;                 # Wymiary siatki
-    runtime :: Int = 100_000,           # Długość symulacji 
+    temp :: Float64 = 1.0,              # Temperatura 
+    runtime :: Int = 1_000_000,         # Długość symulacji 
     setupmode :: Symbol = :random,      # Stan początkowy
-    animdest :: String = "./anim.gif",  # Ścieżka do animacji
     serialize :: Bool = true,           # True - zapisz dane do pliku
-    dumpdest :: String = "./data.txt"   # Ścieżka do zapisywania danych
+    dumpdest :: String = "./data.jld2", # Ścieżka do zapisywania danych
+    sampling_freq :: Int64 = 1000       # Cześtość snapshotów
 )
 
     lattice = simsetup(size, setupmode)
+    file = nothing
+    snap_count = 1
+
+    # Magnetyzacje po każdym kroku 
+    mags = Vector{Float64}(undef, runtime)
 
     if serialize
         touch(dumpdest)
-        file = open(dumpdest, "w")
+        file = jldopen(dumpdest, "w")
     end
-    
-    anim = @animate for MCS in 1:runtime 
+
+    for MCS in ProgressBar(1:runtime)
         
-        if !isnothing(file)
-            _writelattice(lattice, file)
+        mags[MCS] = magnetization(lattice)
+
+        if !isnothing(file) && MCS % sampling_freq == 0
+            file["$snap_count"] = lattice
+            snap_count += 1
         end
+
         indexes = ceil.(Coordinate, size .* rand(size^2, 2))
         
         for point in eachrow(indexes)
-            metro!(lattice, point[1], point[2], 1.0)
+            metro!(lattice, point[1], point[2], temp)
         end
         
-        heatmap(lattice, legend=false, axis_ratio=1)
+
         MCS += 1
     end
-    
+
     if !isnothing(file)
         close(file)
     end
-    
-    gif(anim, animdest, fps=25)
+
+    return mags 
 
 end
 
-    
-    
-simulation(
-    Coordinate(100),
-    setupmode = :random,
-    animdest = "./anim.gif",
-    serialize = true,
-    dumpdest = "./data.txt"
-)
+
+function animation(src)
+    snaps = load(src)
+
+    anim = @animate for idx in ProgressBar(1:length(snaps))
+        heatmap(snaps["$idx"])
+    end
+
+    return anim
+end
+
+mags = simulate(Coordinate(100); temp=1.0)
+scatter(mags[1:100:end], markersize=0.1)
+
+anim = animation("data.jld2")
+
+gif(anim, "anim.gif")
