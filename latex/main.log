@@ -1,0 +1,922 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.15)  15 JUN 2023 17:17
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./main.tex
+(main.tex
+LaTeX2e <2020-10-01> patch level 1
+L3 programming layer <2020-10-05> xparse <2020-03-03>
+(D:\LaTeX\tex/latex/base\article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(D:\LaTeX\tex/latex/base\size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count175
+\c@section=\count176
+\c@subsection=\count177
+\c@subsubsection=\count178
+\c@paragraph=\count179
+\c@subparagraph=\count180
+\c@figure=\count181
+\c@table=\count182
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (D:\LaTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(D:\LaTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+) (D:\LaTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+(D:\LaTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count183
+\Gm@cntv=\count184
+\c@Gm@tempcnt=\count185
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks16
+
+(D:\LaTeX\tex/latex/geometry\geometry.cfg))
+(D:\LaTeX\tex/latex/polski\polski.sty
+Package: polski 2021/08/25 v1.3.6 Polish language package
+
+   Switching to Polish text encoding and Polish maths fonts.
+(D:\LaTeX\tex/latex/base\ot4enc.def
+File: ot4enc.def 2020/08/10 v2.0s Standard LaTeX file
+Now handling font encoding OT4 ...
+... no UTF-8 mapping file for font encoding OT4
+)
+LaTeX Font Info:    Trying to load font information for OT4+cmr on input line 3
+62.
+ (D:\LaTeX\tex/latex/polski\ot4cmr.fd
+File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT4/cmr/bx/n on input line 362.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT4/cmss/m/n on input line 362.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT4/cmr/m/it on input line 362.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT4/cmtt/m/n on input line 362.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT4/cmss/bx/n on input line 362.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT4/cmr/bx/it on input line 362.
+LaTeX Font Info:    Encoding `OT1' has changed to `OT4' for symbol font
+(Font)              `operators' in the math version `normal' on input line 362.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT4/cmr/m/n on input line 362.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/plm/m/it on input line 362.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/plsy/m/n on input line 362.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/plex/m/n on input line 362.
+LaTeX Font Info:    Encoding `OT1' has changed to `OT4' for symbol font
+(Font)              `operators' in the math version `bold' on input line 362.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT4/cmr/bx/n on input line 362.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/plm/b/it on input line 362.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/plsy/b/n on input line 362.
+)
+(D:\LaTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(D:\LaTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box47
+\beforetitleunit=\skip49
+\aftertitleunit=\skip50
+\ttl@plus=\dimen147
+\ttl@minus=\dimen148
+\ttl@toksa=\toks17
+\titlewidth=\dimen149
+\titlewidthlast=\dimen150
+\titlewidthfirst=\dimen151
+)
+(D:\LaTeX\tex/latex/lipsum\lipsum.sty
+(D:\LaTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
+(D:\LaTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2020-10-05 L3 programming layer (loader) 
+
+(D:\LaTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count186
+\l__pdf_internal_box=\box48
+))
+Package: l3keys2e 2020-10-05 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count187
+\l__lipsum_a_int=\count188
+\l__lipsum_b_int=\count189
+
+LaTeX3 Info: Defining command \LipsumPar with sig. 'm' on line 175.
+
+
+LaTeX3 Info: Defining command \SetLipsumParListItemStart with sig. 's+m' on
+(LaTeX3)     line 208.
+
+
+LaTeX3 Info: Defining command \SetLipsumParListStart with sig. 's+m' on line
+(LaTeX3)     208.
+
+
+LaTeX3 Info: Defining command \SetLipsumParListItemEnd with sig. 's+m' on line
+(LaTeX3)     208.
+
+
+LaTeX3 Info: Defining command \SetLipsumParListEnd with sig. 's+m' on line
+(LaTeX3)     208.
+
+
+LaTeX3 Info: Defining command \SetLipsumParListItemSurrounders with sig.
+(LaTeX3)     's+m+m' on line 208.
+
+
+LaTeX3 Info: Defining command \SetLipsumParListSurrounders with sig. 's+m+m'
+(LaTeX3)     on line 208.
+
+
+LaTeX3 Info: Defining command \SetLipsumParListItemSeparator with sig. 's+m'
+(LaTeX3)     on line 208.
+
+
+LaTeX3 Info: Defining command \SetLipsumSentenceListItemStart with sig. 's+m'
+(LaTeX3)     on line 208.
+
+
+LaTeX3 Info: Defining command \SetLipsumSentenceListStart with sig. 's+m' on
+(LaTeX3)     line 208.
+
+
+LaTeX3 Info: Defining command \SetLipsumSentenceListItemEnd with sig. 's+m' on
+(LaTeX3)     line 208.
+
+
+LaTeX3 Info: Defining command \SetLipsumSentenceListEnd with sig. 's+m' on
+(LaTeX3)     line 208.
+
+
+LaTeX3 Info: Defining command \SetLipsumSentenceListItemSurrounders with sig.
+(LaTeX3)     's+m+m' on line 208.
+
+
+LaTeX3 Info: Defining command \SetLipsumSentenceListSurrounders with sig.
+(LaTeX3)     's+m+m' on line 208.
+
+
+LaTeX3 Info: Defining command \SetLipsumSentenceListItemSeparator with sig.
+(LaTeX3)     's+m' on line 208.
+
+
+LaTeX3 Info: Defining command \SetLipsumDefault with sig. 'm' on line 214.
+
+
+LaTeX3 Info: Defining command \lipsum with sig. 'sO{\g_lipsum_default_range_tl
+(LaTeX3)     }o' on line 223.
+
+
+LaTeX3 Info: Defining command \unpacklipsum with sig.
+(LaTeX3)     'sO{\g_lipsum_default_range_tl }o' on line 225.
+
+
+LaTeX3 Info: Defining command \SetLipsumText with sig. 'm' on line 326.
+
+
+LaTeX3 Info: Defining command \SetLipsumLanguage with sig. 'm' on line 328.
+
+
+LaTeX3 Info: Defining command \setlipsum with sig. '+m' on line 357.
+
+
+(D:\LaTeX\tex/latex/lipsum\lipsum.ltd.tex))
+(D:\LaTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(D:\LaTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+ (D:\LaTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (D:\LaTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(D:\LaTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen152
+\Gin@req@width=\dimen153
+)
+(D:\LaTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
+
+(D:\LaTeX\tex/latex/caption\caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+
+(D:\LaTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen154
+\captionmargin=\dimen155
+\caption@leftmargin=\dimen156
+\caption@rightmargin=\dimen157
+\caption@width=\dimen158
+\caption@indent=\dimen159
+\caption@parindent=\dimen160
+\caption@hangindent=\dimen161
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count190
+\c@continuedfloat=\count191
+)
+Package caption Info: New subtype `subfigure' on input line 239.
+\c@subfigure=\count192
+Package caption Info: New subtype `subtable' on input line 239.
+\c@subtable=\count193
+) (D:\LaTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count194
+\float@exts=\toks18
+\float@box=\box49
+\@float@everytoks=\toks19
+\@floatcapt=\box50
+) (main.aux
+
+LaTeX Warning: Label `fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `fig:series' multiply defined.
+
+
+LaTeX Warning: Label `fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `fig:series' multiply defined.
+
+
+LaTeX Warning: Label `fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `fig:series' multiply defined.
+
+
+LaTeX Warning: Label `fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `fig:series' multiply defined.
+
+
+LaTeX Warning: Label `fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `fig:series' multiply defined.
+
+
+LaTeX Warning: Label `fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `fig:series' multiply defined.
+
+
+LaTeX Warning: Label `fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `fig:series' multiply defined.
+
+
+LaTeX Warning: Label `fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `fig:series' multiply defined.
+
+
+LaTeX Warning: Label `fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `fig:series' multiply defined.
+
+
+LaTeX Warning: Label `fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `fig:series' multiply defined.
+
+
+LaTeX Warning: Label `fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image1' multiply defined.
+
+
+LaTeX Warning: Label `fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image2' multiply defined.
+
+
+LaTeX Warning: Label `fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:image3' multiply defined.
+
+
+LaTeX Warning: Label `fig:series' multiply defined.
+
+)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(D:\LaTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count195
+\scratchdimen=\dimen162
+\scratchbox=\box51
+\nofMPsegments=\count196
+\nofMParguments=\count197
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count198
+\MPscratchDim=\dimen163
+\MPnumerator=\count199
+\makeMPintoPDFobject=\count266
+\everyMPtoPDFconversion=\toks21
+) (D:\LaTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(D:\LaTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for OML+plm on input line 3
+1.
+
+(D:\LaTeX\tex/latex/polski\omlplm.fd
+File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+LaTeX Font Info:    Trying to load font information for OMS+plsy on input line 
+31.
+ (D:\LaTeX\tex/latex/polski\omsplsy.fd
+File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+LaTeX Font Info:    Trying to load font information for OMX+plex on input line 
+31.
+
+(D:\LaTeX\tex/latex/polski\omxplex.fd
+File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <14.4> on input line 31.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <10> on input line 31.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <7> on input line 31.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <12> on input line 58.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <8> on input line 58.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <6> on input line 58.
+ [1
+
+{C:/Users/eemil/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+<../data/snaps/snap10_temp1.0_moment1.png, id=12, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap10_temp1.0_moment1.png Graphic file (type png)
+<use ../data/snaps/snap10_temp1.0_moment1.png>
+Package pdftex.def Info: ../data/snaps/snap10_temp1.0_moment1.png  used on inpu
+t line 66.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap10_temp1.0_moment50.png, id=13, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap10_temp1.0_moment50.png Graphic file (type png)
+<use ../data/snaps/snap10_temp1.0_moment50.png>
+Package pdftex.def Info: ../data/snaps/snap10_temp1.0_moment50.png  used on inp
+ut line 73.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap10_temp1.0_moment100.png, id=14, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap10_temp1.0_moment100.png Graphic file (type png)
+<use ../data/snaps/snap10_temp1.0_moment100.png>
+Package pdftex.def Info: ../data/snaps/snap10_temp1.0_moment100.png  used on in
+put line 80.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap10_temp2.26_moment1.png, id=15, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap10_temp2.26_moment1.png Graphic file (type png)
+<use ../data/snaps/snap10_temp2.26_moment1.png>
+Package pdftex.def Info: ../data/snaps/snap10_temp2.26_moment1.png  used on inp
+ut line 94.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap10_temp2.26_moment50.png, id=16, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap10_temp2.26_moment50.png Graphic file (type png)
+<use ../data/snaps/snap10_temp2.26_moment50.png>
+Package pdftex.def Info: ../data/snaps/snap10_temp2.26_moment50.png  used on in
+put line 101.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap10_temp2.26_moment100.png, id=17, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap10_temp2.26_moment100.png Graphic file (type png)
+<use ../data/snaps/snap10_temp2.26_moment100.png>
+Package pdftex.def Info: ../data/snaps/snap10_temp2.26_moment100.png  used on i
+nput line 108.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap10_temp4.0_moment1.png, id=18, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap10_temp4.0_moment1.png Graphic file (type png)
+<use ../data/snaps/snap10_temp4.0_moment1.png>
+Package pdftex.def Info: ../data/snaps/snap10_temp4.0_moment1.png  used on inpu
+t line 122.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap10_temp4.0_moment50.png, id=19, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap10_temp4.0_moment50.png Graphic file (type png)
+<use ../data/snaps/snap10_temp4.0_moment50.png>
+Package pdftex.def Info: ../data/snaps/snap10_temp4.0_moment50.png  used on inp
+ut line 129.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap10_temp4.0_moment100.png, id=20, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap10_temp4.0_moment100.png Graphic file (type png)
+<use ../data/snaps/snap10_temp4.0_moment100.png>
+Package pdftex.def Info: ../data/snaps/snap10_temp4.0_moment100.png  used on in
+put line 136.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap80_temp1.0_moment1.png, id=21, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap80_temp1.0_moment1.png Graphic file (type png)
+<use ../data/snaps/snap80_temp1.0_moment1.png>
+Package pdftex.def Info: ../data/snaps/snap80_temp1.0_moment1.png  used on inpu
+t line 150.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap80_temp1.0_moment50.png, id=22, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap80_temp1.0_moment50.png Graphic file (type png)
+<use ../data/snaps/snap80_temp1.0_moment50.png>
+Package pdftex.def Info: ../data/snaps/snap80_temp1.0_moment50.png  used on inp
+ut line 157.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap80_temp1.0_moment100.png, id=23, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap80_temp1.0_moment100.png Graphic file (type png)
+<use ../data/snaps/snap80_temp1.0_moment100.png>
+Package pdftex.def Info: ../data/snaps/snap80_temp1.0_moment100.png  used on in
+put line 164.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap80_temp2.26_moment1.png, id=24, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap80_temp2.26_moment1.png Graphic file (type png)
+<use ../data/snaps/snap80_temp2.26_moment1.png>
+Package pdftex.def Info: ../data/snaps/snap80_temp2.26_moment1.png  used on inp
+ut line 178.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap80_temp2.26_moment50.png, id=25, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap80_temp2.26_moment50.png Graphic file (type png)
+<use ../data/snaps/snap80_temp2.26_moment50.png>
+Package pdftex.def Info: ../data/snaps/snap80_temp2.26_moment50.png  used on in
+put line 185.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap80_temp2.26_moment100.png, id=26, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap80_temp2.26_moment100.png Graphic file (type png)
+<use ../data/snaps/snap80_temp2.26_moment100.png>
+Package pdftex.def Info: ../data/snaps/snap80_temp2.26_moment100.png  used on i
+nput line 192.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+ [2 <../data/snaps/snap10_temp1.0_moment1.png> <../data/snaps/snap10_temp1.0_mo
+ment50.png> <../data/snaps/snap10_temp1.0_moment100.png> <../data/snaps/snap10_
+temp2.26_moment1.png> <../data/snaps/snap10_temp2.26_moment50.png> <../data/sna
+ps/snap10_temp2.26_moment100.png> <../data/snaps/snap10_temp4.0_moment1.png> <.
+./data/snaps/snap10_temp4.0_moment50.png> <../data/snaps/snap10_temp4.0_moment1
+00.png> <../data/snaps/snap80_temp1.0_moment1.png> <../data/snaps/snap80_temp1.
+0_moment50.png> <../data/snaps/snap80_temp1.0_moment100.png>]
+<../data/snaps/snap80_temp4.0_moment1.png, id=31, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap80_temp4.0_moment1.png Graphic file (type png)
+<use ../data/snaps/snap80_temp4.0_moment1.png>
+Package pdftex.def Info: ../data/snaps/snap80_temp4.0_moment1.png  used on inpu
+t line 206.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap80_temp4.0_moment50.png, id=32, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap80_temp4.0_moment50.png Graphic file (type png)
+<use ../data/snaps/snap80_temp4.0_moment50.png>
+Package pdftex.def Info: ../data/snaps/snap80_temp4.0_moment50.png  used on inp
+ut line 213.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/snaps/snap80_temp4.0_moment100.png, id=33, 400.49625pt x 401.5pt>
+File: ../data/snaps/snap80_temp4.0_moment100.png Graphic file (type png)
+<use ../data/snaps/snap80_temp4.0_moment100.png>
+Package pdftex.def Info: ../data/snaps/snap80_temp4.0_moment100.png  used on in
+put line 220.
+(pdftex.def)             Requested size: 100.37436pt x 100.37474pt.
+<../data/magnetizations/10.png, id=34, 602.25pt x 401.5pt>
+File: ../data/magnetizations/10.png Graphic file (type png)
+<use ../data/magnetizations/10.png>
+Package pdftex.def Info: ../data/magnetizations/10.png  used on input line 239.
+
+(pdftex.def)             Requested size: 271.01pt x 180.67332pt.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <10.95> on input line 240.
+<../data/magnetizations/20.png, id=35, 602.25pt x 401.5pt>
+File: ../data/magnetizations/20.png Graphic file (type png)
+<use ../data/magnetizations/20.png>
+Package pdftex.def Info: ../data/magnetizations/20.png  used on input line 246.
+
+(pdftex.def)             Requested size: 271.01pt x 180.67332pt.
+
+Overfull \hbox (59.62167pt too wide) in paragraph at lines 246--247
+ [][] 
+ []
+
+<../data/magnetizations/40.png, id=36, 602.25pt x 401.5pt>
+File: ../data/magnetizations/40.png Graphic file (type png)
+<use ../data/magnetizations/40.png>
+Package pdftex.def Info: ../data/magnetizations/40.png  used on input line 259.
+
+(pdftex.def)             Requested size: 271.01pt x 180.67332pt.
+<../data/magnetizations/80.png, id=37, 602.25pt x 401.5pt>
+File: ../data/magnetizations/80.png Graphic file (type png)
+<use ../data/magnetizations/80.png>
+Package pdftex.def Info: ../data/magnetizations/80.png  used on input line 266.
+
+(pdftex.def)             Requested size: 271.01pt x 180.67332pt.
+
+Overfull \hbox (59.62167pt too wide) in paragraph at lines 266--267
+ [][] 
+ []
+
+[3 <../data/snaps/snap80_temp2.26_moment1.png> <../data/snaps/snap80_temp2.26_m
+oment50.png> <../data/snaps/snap80_temp2.26_moment100.png> <../data/snaps/snap8
+0_temp4.0_moment1.png> <../data/snaps/snap80_temp4.0_moment50.png> <../data/sna
+ps/snap80_temp4.0_moment100.png> <../data/magnetizations/10.png> <../data/magne
+tizations/20.png>]
+<../data/magnetizations/10_T1.3.png, id=42, 602.25pt x 401.5pt>
+File: ../data/magnetizations/10_T1.3.png Graphic file (type png)
+<use ../data/magnetizations/10_T1.3.png>
+Package pdftex.def Info: ../data/magnetizations/10_T1.3.png  used on input line
+ 285.
+(pdftex.def)             Requested size: 150.56212pt x 150.56825pt.
+
+Overfull \hbox (9.63419pt too wide) in paragraph at lines 285--286
+ [][] 
+ []
+
+<../data/magnetizations/10_T2.26.png, id=43, 602.25pt x 401.5pt>
+File: ../data/magnetizations/10_T2.26.png Graphic file (type png)
+<use ../data/magnetizations/10_T2.26.png>
+Package pdftex.def Info: ../data/magnetizations/10_T2.26.png  used on input lin
+e 292.
+(pdftex.def)             Requested size: 150.56212pt x 150.56825pt.
+
+Overfull \hbox (9.63419pt too wide) in paragraph at lines 292--293
+ [][] 
+ []
+
+<../data/magnetizations/10_T3.6.png, id=44, 602.25pt x 401.5pt>
+File: ../data/magnetizations/10_T3.6.png Graphic file (type png)
+<use ../data/magnetizations/10_T3.6.png>
+Package pdftex.def Info: ../data/magnetizations/10_T3.6.png  used on input line
+ 299.
+(pdftex.def)             Requested size: 150.56212pt x 150.56825pt.
+
+Overfull \hbox (9.63419pt too wide) in paragraph at lines 299--300
+ [][] 
+ []
+
+<../data/magnetizations/20_T1.3.png, id=45, 602.25pt x 401.5pt>
+File: ../data/magnetizations/20_T1.3.png Graphic file (type png)
+<use ../data/magnetizations/20_T1.3.png>
+Package pdftex.def Info: ../data/magnetizations/20_T1.3.png  used on input line
+ 314.
+(pdftex.def)             Requested size: 150.56212pt x 150.56825pt.
+
+Overfull \hbox (9.63419pt too wide) in paragraph at lines 314--315
+ [][] 
+ []
+
+<../data/magnetizations/20_T2.26.png, id=46, 602.25pt x 401.5pt>
+File: ../data/magnetizations/20_T2.26.png Graphic file (type png)
+<use ../data/magnetizations/20_T2.26.png>
+Package pdftex.def Info: ../data/magnetizations/20_T2.26.png  used on input lin
+e 321.
+(pdftex.def)             Requested size: 150.56212pt x 150.56825pt.
+
+Overfull \hbox (9.63419pt too wide) in paragraph at lines 321--322
+ [][] 
+ []
+
+<../data/magnetizations/20_T3.6.png, id=47, 602.25pt x 401.5pt>
+File: ../data/magnetizations/20_T3.6.png Graphic file (type png)
+<use ../data/magnetizations/20_T3.6.png>
+Package pdftex.def Info: ../data/magnetizations/20_T3.6.png  used on input line
+ 328.
+(pdftex.def)             Requested size: 150.56212pt x 150.56825pt.
+
+Overfull \hbox (9.63419pt too wide) in paragraph at lines 328--329
+ [][] 
+ []
+
+[4 <../data/magnetizations/40.png> <../data/magnetizations/80.png> <../data/mag
+netizations/10_T1.3.png> <../data/magnetizations/10_T2.26.png> <../data/magneti
+zations/10_T3.6.png>]
+<../data/magnetizations/40_T1.3.png, id=51, 602.25pt x 401.5pt>
+File: ../data/magnetizations/40_T1.3.png Graphic file (type png)
+<use ../data/magnetizations/40_T1.3.png>
+Package pdftex.def Info: ../data/magnetizations/40_T1.3.png  used on input line
+ 343.
+(pdftex.def)             Requested size: 150.56212pt x 150.56825pt.
+
+Overfull \hbox (9.63419pt too wide) in paragraph at lines 343--344
+ [][] 
+ []
+
+<../data/magnetizations/40_T2.26.png, id=52, 602.25pt x 401.5pt>
+File: ../data/magnetizations/40_T2.26.png Graphic file (type png)
+<use ../data/magnetizations/40_T2.26.png>
+Package pdftex.def Info: ../data/magnetizations/40_T2.26.png  used on input lin
+e 350.
+(pdftex.def)             Requested size: 150.56212pt x 150.56825pt.
+
+Overfull \hbox (9.63419pt too wide) in paragraph at lines 350--351
+ [][] 
+ []
+
+<../data/magnetizations/40_T3.6.png, id=53, 602.25pt x 401.5pt>
+File: ../data/magnetizations/40_T3.6.png Graphic file (type png)
+<use ../data/magnetizations/40_T3.6.png>
+Package pdftex.def Info: ../data/magnetizations/40_T3.6.png  used on input line
+ 357.
+(pdftex.def)             Requested size: 150.56212pt x 150.56825pt.
+
+Overfull \hbox (9.63419pt too wide) in paragraph at lines 357--358
+ [][] 
+ []
+
+<../data/magnetizations/80_T1.3.png, id=54, 602.25pt x 401.5pt>
+File: ../data/magnetizations/80_T1.3.png Graphic file (type png)
+<use ../data/magnetizations/80_T1.3.png>
+Package pdftex.def Info: ../data/magnetizations/80_T1.3.png  used on input line
+ 372.
+(pdftex.def)             Requested size: 150.56212pt x 150.56825pt.
+
+Overfull \hbox (9.63419pt too wide) in paragraph at lines 372--373
+ [][] 
+ []
+
+<../data/magnetizations/80_T2.26.png, id=55, 602.25pt x 401.5pt>
+File: ../data/magnetizations/80_T2.26.png Graphic file (type png)
+<use ../data/magnetizations/80_T2.26.png>
+Package pdftex.def Info: ../data/magnetizations/80_T2.26.png  used on input lin
+e 379.
+(pdftex.def)             Requested size: 150.56212pt x 150.56825pt.
+
+Overfull \hbox (9.63419pt too wide) in paragraph at lines 379--380
+ [][] 
+ []
+
+<../data/magnetizations/80_T3.6.png, id=56, 602.25pt x 401.5pt>
+File: ../data/magnetizations/80_T3.6.png Graphic file (type png)
+<use ../data/magnetizations/80_T3.6.png>
+Package pdftex.def Info: ../data/magnetizations/80_T3.6.png  used on input line
+ 386.
+(pdftex.def)             Requested size: 150.56212pt x 150.56825pt.
+
+Overfull \hbox (9.63419pt too wide) in paragraph at lines 386--387
+ [][] 
+ []
+
+<../data/magnetizations/mag_temp.png, id=57, 602.25pt x 401.5pt>
+File: ../data/magnetizations/mag_temp.png Graphic file (type png)
+<use ../data/magnetizations/mag_temp.png>
+Package pdftex.def Info: ../data/magnetizations/mag_temp.png  used on input lin
+e 401.
+(pdftex.def)             Requested size: 361.35278pt x 240.90184pt.
+[5 <../data/magnetizations/20_T1.3.png> <../data/magnetizations/20_T2.26.png> <
+../data/magnetizations/20_T3.6.png> <../data/magnetizations/40_T1.3.png> <../da
+ta/magnetizations/40_T2.26.png> <../data/magnetizations/40_T3.6.png> <../data/m
+agnetizations/80_T1.3.png> <../data/magnetizations/80_T2.26.png> <../data/magne
+tizations/80_T3.6.png>]
+<../data/magnetizations/mag_time.png, id=61, 602.25pt x 401.5pt>
+File: ../data/magnetizations/mag_time.png Graphic file (type png)
+<use ../data/magnetizations/mag_time.png>
+Package pdftex.def Info: ../data/magnetizations/mag_time.png  used on input lin
+e 408.
+(pdftex.def)             Requested size: 361.35278pt x 240.90184pt.
+ [6 <../data/magnetizations/mag_temp.png> <../data/magnetizations/mag_time.png>
+] (main.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4390 strings out of 480120
+ 77259 string characters out of 5894496
+ 439154 words of memory out of 5000000
+ 20953 multiletter control sequences out of 15000+600000
+ 546547 words of font info for 58 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 70i,8n,78p,299b,504s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{D:/LaTeX/fonts/enc/dvips/pl/plms.enc}{D:/LaTeX/fonts/enc/dvips/pl/plmi.enc}{
+D:/LaTeX/fonts/enc/dvips/pl/plrm.enc}{D:/LaTeX/fonts/enc/dvips/cm-super/cm-supe
+r-ts1.enc}<D:/LaTeX/fonts/type1/public/pl/plbx12.pfb><D:/LaTeX/fonts/type1/publ
+ic/pl/plmi10.pfb><D:/LaTeX/fonts/type1/public/pl/plmi12.pfb><D:/LaTeX/fonts/typ
+e1/public/pl/plmi8.pfb><D:/LaTeX/fonts/type1/public/pl/plr10.pfb><D:/LaTeX/font
+s/type1/public/pl/plr12.pfb><D:/LaTeX/fonts/type1/public/pl/plr17.pfb><D:/LaTeX
+/fonts/type1/public/pl/plsy10.pfb><D:/LaTeX/fonts/type1/public/pl/plsy8.pfb><D:
+/LaTeX/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (6 pages, 1484895 bytes).
+PDF statistics:
+ 101 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+
