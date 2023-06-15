@@ -5,6 +5,7 @@ module Ising
     using Statistics
     using Plots
     using ProgressBars
+    using Random
     using JLD2
     #######################
     
@@ -16,7 +17,9 @@ module Ising
     const β  = 1/kb
     #######################
     
-    export simulate, animation
+    export simulate, animation, Coordinate
+
+
     """
 
     Zwróć siatkę losowo ustawionych spinów (-1 lub 1) dla `setupmode = :random`
@@ -40,7 +43,32 @@ module Ising
     end
 
 
+    """
+    Zwróć sumaryczne namagentyzowanie układu 
+    """
+    function magnetization(lat :: Matrix{Int8})
+        return mean(lat)
+    end
 
+
+    """
+    Zwróć energię odzdziaływań z sąsiadami (siatka kwadratowa) dla danego agenta 
+    """
+    function getenergy(lat :: Matrix{Int8}, i :: Coordinate, j :: Coordinate)
+        
+        L = size(lat, 1)
+        return J * lat[i, j] * (lat[i, mod1(j - 1, L)] + lat[mod1(i - 1, L), j] + lat[mod1(i + 1, L), j] + lat[i, mod1(j + 1, L)])
+            
+    end
+
+
+    """
+    Zwróć przyrost energii wynikający ze zmiany spinu danego agenta 
+    """
+    function getenergydifference(lat :: Matrix{Int8}, i :: Coordinate, j :: Coordinate)
+        return 2 * getenergy(lat, i, j)
+    end
+    
 
     """
     Zmień spin jeśli spowoduje to spadek energii układu. Jeśli spowoduje wzrost to zmień
@@ -51,104 +79,25 @@ module Ising
         ΔE = getenergydifference(lat, i, j)
         if ΔE <= 0
             return lat[i, j] *= -1
-        end
-        return rand() <= exp(-β * ΔE / temp) && (lat[i, j] *= -1) 
+        return (temp * randexp() > β * ΔE) && (lat[i, j] *= -1)
 
     end
-
-
-
-
-    """
-    Zwróć sumaryczne namagentyzowanie układu 
-    """
-    function magnetization(lat :: Matrix{Int8})
-        return mean(lat)
-    end
-
-
-
-
-    """
-    Zwróć energię odzdziaływań z sąsiadami (siatka kwadratowa) dla danego agenta 
-    """
-    function getenergy(lat :: Matrix{Int8}, i :: Coordinate, j :: Coordinate)
-        
-        topneighbor    = 0
-        leftneighbor   = 0
-        rightneighbor  = 0
-        bottomneighbor = 0
-
-        # Przypisz wartości do poszczegołnych sąsiadów (jeśli istnieją)
-        try 
-            topneighbor = lat[i, j - 1]
-        catch
-        end
-
-        try 
-            leftneighbor = lat[i - 1, j]
-        catch
-        end
-
-        try 
-            rightneighbor = lat[i + 1, j]
-        catch
-        end
-
-        try
-            bottomneighbor = lat[i, j + 1]
-        catch
-        end
-
-
-        return J * lat[i, j] * sum([topneighbor, leftneighbor, rightneighbor, bottomneighbor])
-            
-    end
-
-
-
-
-    """
-    Zwróć przyrost energii wynikający ze zmiany spinu danego agenta 
-    """
-    function getenergydifference(lat :: Matrix{Int8}, i :: Coordinate, j :: Coordinate)
-        return 2 * getenergy(lat, i, j)
-    end
-
-
-
-
-    """
-    Zwróć sumaryczną energię całego układu 
-    """
-    function getenergysystem(lat :: Matrix{Int8})
-        totalenergy = 0
-        for i = 1:size(lat, 1)
-            for j = 1:size(lat, 2)
-                totalenergy += getenergy(lat, i ,j)
-            end
-        end
-        return totalenergy
-    end
-
 
 
     """
     Symulacja modelu Isinga
-    Zwraca wektor magentyzacji i zapisuje siatkę po każdym kroku
+    Zwraca wektor magentyzacji i zapisuje siatkę po każdym kroku (dla serialize == true)
     """
     function simulate(
         size :: Coordinate;                      # Wymiary siatki
         temp :: Float64 = 1.0,                   # Temperatura 
-        runtime :: Int = 1_000_000,              # Długość symulacji 
+        runtime :: Int = 100,                    # Długość symulacji 
         setupmode :: Symbol = :random,           # Stan początkowy
         serialize :: Bool = true,                # True - zapisz dane do pliku
         dumpdest :: String = "./data/data.jld2", # Ścieżka do zapisywania danych
-        sampling_freq :: Int64 = 1000            # Cześtość snapshotów
     )
 
         lattice = simsetup(size, setupmode)
-        snap_count = 1
 
         # Magnetyzacje po każdym kroku 
         mags = Vector{Float64}(undef, runtime)
@@ -158,18 +107,17 @@ module Ising
             file = jldopen(dumpdest, "w")
         end
 
-        for MCS in ProgressBar(1:runtime)
+        @simd for MCS in ProgressBar(1:runtime)
             
             mags[MCS] = magnetization(lattice)
 
-            if serialize && MCS % sampling_freq == 0
-                file["$snap_count"] = lattice
-                snap_count += 1
+            if serialize
+                file["$MCS"] = lattice
             end
 
-            indexes = ceil.(Coordinate, size .* rand(size^2, 2))
+            indexes = ceil.(Coordinate, size .* rand(Int64(size)^2, 2))
             
-            for point in eachrow(indexes)
+            @simd for point in eachrow(indexes)
                 metro!(lattice, point[1], point[2], temp)
             end
             
@@ -186,6 +134,9 @@ module Ising
     end
 
 
+    """
+    Zwróć animację ewolucji układu utworzoną z danych z pliku źródłowego.
+    """
     function animation(src, colorscheme)
         snaps = load(src)
 
@@ -195,6 +146,5 @@ module Ising
 
         return anim
     end
-
 
 end
