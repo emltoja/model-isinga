@@ -1,47 +1,42 @@
 module Ising
     
     # IMPORTY 
-    ####################### 
+    # ========================
     using Statistics
     using Plots
     using ProgressBars
     using Random
     using JLD2
-    #######################
+    # ========================
     
     # STAŁE GLOBALNE
-    #######################
+    # ========================
     const Coordinate = UInt8
     const J  = 1
     const kb = 1
     const β  = 1/kb
-    #######################
+    # ========================
     
     export simulate, animation, Coordinate
 
 
     """
-
     Zwróć siatkę losowo ustawionych spinów (-1 lub 1) dla `setupmode = :random`
     albo spinów równych 1 dla `setupmode = :ordered`
-
     """
     function simsetup(size :: Coordinate, setupmode :: Symbol = :random) 
         
         if setupmode === :random 
-
-            return rand([Int8(-1), Int8(1)], size, size)
-
-        elseif setupmode === :ordered
-
-            return ones(Int8, size, size)
-
-        else error("setupmode should be either :random or :ordered")
-
+             return rand([Int8(-1), Int8(1)], size, size)
         end
 
-    end
+        if setupmode === :ordered
+            return ones(Int8, size, size)
+        end
 
+        throw(ArgumentError("`setupmode` should be either :ordered or :random"))
+
+    end
 
     """
     Zwróć sumaryczne namagentyzowanie układu 
@@ -50,26 +45,16 @@ module Ising
         return mean(lat)
     end
 
-
-    """
-    Zwróć energię odzdziaływań z sąsiadami (siatka kwadratowa) dla danego agenta 
-    """
-    function getenergy(lat :: Matrix{Int8}, i :: Coordinate, j :: Coordinate)
-        
-        L = size(lat, 1)
-        return J * lat[i, j] * (lat[i, mod1(j - 1, L)] + lat[mod1(i - 1, L), j] + lat[mod1(i + 1, L), j] + lat[i, mod1(j + 1, L)])
-            
-    end
-
-
     """
     Zwróć przyrost energii wynikający ze zmiany spinu danego agenta 
     """
     function getenergydifference(lat :: Matrix{Int8}, i :: Coordinate, j :: Coordinate)
-        return 2 * getenergy(lat, i, j)
+        
+        L = size(lat, 1)
+        return 2 * J * lat[i, j] * (lat[i, mod1(j - 1, L)] + lat[mod1(i - 1, L), j] + lat[mod1(i + 1, L), j] + lat[i, mod1(j + 1, L)])
+            
     end
     
-
     """
     Zmień spin jeśli spowoduje to spadek energii układu. Jeśli spowoduje wzrost to zmień
     z prawdopodobieństwem `exp(-β * ΔE / T)`
@@ -82,7 +67,6 @@ module Ising
         return (temp * randexp() > β * ΔE) && (lat[i, j] *= -1)
 
     end
-
 
     """
     Symulacja modelu Isinga
@@ -107,6 +91,7 @@ module Ising
             file = jldopen(dumpdest, "w")
         end
 
+        # Symulacja Monte-Carlo
         @simd for MCS in ProgressBar(1:runtime)
             
             mags[MCS] = magnetization(lattice)
@@ -115,14 +100,14 @@ module Ising
                 file["$MCS"] = lattice
             end
 
+            # Wylosowanie L² indeksów do symulacji
             indexes = ceil.(Coordinate, size .* rand(Int64(size)^2, 2))
             
+            # Wywołanie algorytmu Metropolisa dla wylosowanyhch indeksów
             @simd for point in eachrow(indexes)
                 metro!(lattice, point[1], point[2], temp)
             end
             
-
-            MCS += 1
         end
 
         if serialize
@@ -132,7 +117,6 @@ module Ising
         return mags 
 
     end
-
 
     """
     Zwróć animację ewolucji układu utworzoną z danych z pliku źródłowego.
