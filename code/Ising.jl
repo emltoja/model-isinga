@@ -65,6 +65,7 @@ module Ising
         if ΔE <= 0
             return lat[i, j] *= -1
         return (temp * randexp() > β * ΔE) && (lat[i, j] *= -1)
+        end
 
     end
 
